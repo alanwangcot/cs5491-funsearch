@@ -67,9 +67,9 @@ We also prepared the 20 original instances in OR-Library's \texttt{binpack3} col
 
 \newpage
 \section*{4. Progress and preliminary results}
-The evaluator, datasets, classical rules and both search versions are working. Runs can be saved and continued. The automated tests cover packing decisions, generated programs and the search process.
+The milestone includes the evaluator, prepared datasets, classical rules and both search versions. All 74 milestone tests pass, covering packing decisions, generated programs and the search process. New search runs can be saved and continued.
 
-A short pilot made eight API calls per method. All 16 generated programs ran successfully, confirming that the model connection and evaluation loop worked together.
+A short pilot made eight API calls per method. All 16 generated programs ran successfully. The saved programs and run records are included in \texttt{data/pilot/}.
 
 \begin{center}
 \begin{tabularx}{\linewidth}{@{}Yrrr@{}}
@@ -97,12 +97,14 @@ On the 100 search instances, Best Fit used 21,155 bins and First Fit used 21,255
 \bottomrule
 \end{tabularx}
 
-All three members share the analysis of results and report writing.
+Source headers follow this division; we share analysis and report writing.
 
-\section*{6. Full comparison and supporting code}
-The full comparison uses five independent runs per method and 200 calls per run. Validation data chooses one program from each run; these are then compared on test data. We examine bin use, progress during search, the number of programs that work and API usage.
+\section*{6. Next steps and supporting code}
+We plan to compare five 200-call runs per method, choose one program from each run using validation data, and evaluate these programs on the test sets.
 
-The code, evaluator and pilot records are available at:\\[3pt]
+The milestone code and pilot evaluation are available at:\\[3pt]
 \href{https://github.com/alanwangcot/cs5491-funsearch/tree/main}{\texttt{github.com/alanwangcot/cs5491-funsearch}}\\[3pt]
-Milestone code is on the \texttt{main} branch. The README gives setup and evaluation commands.
+Milestone code is on the \texttt{main} branch. After setup, the checks below run without an API key:\\[4pt]
+\texttt{uv run pytest -q}\\[2pt]
+\texttt{uv run python scripts/evaluate\_pilot.py}
 \end{document}
