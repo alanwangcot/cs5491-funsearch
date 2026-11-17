@@ -1,0 +1,105 @@
+{
+  "files": {
+    "data/processed/or_library-search.json": {
+      "benchmark": "or_library",
+      "count": 24,
+      "sha256": "4b54ee6204f7de73b148e045525bf75d55c0c3883d30f1f31371e8eeff18e16b",
+      "source_count": 8,
+      "source_ids": [
+        "u500_13",
+        "u500_14",
+        "u500_12",
+        "u500_01",
+        "u500_09",
+        "u500_06",
+        "u500_04",
+        "u500_08"
+      ],
+      "split": "search"
+    },
+    "data/processed/or_library-test.json": {
+      "benchmark": "or_library",
+      "count": 24,
+      "sha256": "ad9cfbe5f4df350d5b913ef3ac9c202509e6b8c5b561a4c306bd08fbfd94f41d",
+      "source_count": 8,
+      "source_ids": [
+        "u500_07",
+        "u500_19",
+        "u500_03",
+        "u500_11",
+        "u500_18",
+        "u500_16",
+        "u500_15",
+        "u500_02"
+      ],
+      "split": "test"
+    },
+    "data/processed/or_library-validation.json": {
+      "benchmark": "or_library",
+      "count": 12,
+      "sha256": "0c2691d87935e219ec8bf779e03d41bfb1b7536ca79af221807230e0cdaf07e6",
+      "source_count": 4,
+      "source_ids": [
+        "u500_10",
+        "u500_17",
+        "u500_00",
+        "u500_05"
+      ],
+      "split": "validation"
+    },
+    "data/processed/synthetic-development.json": {
+      "benchmark": "synthetic",
+      "count": 4,
+      "seed": 2026111604,
+      "sha256": "0058071a2b1301f6019241dfa11c949c1a28a3dbbd9494144291a14197c3fc5c",
+      "split": "development"
+    },
+    "data/processed/synthetic-search.json": {
+      "benchmark": "synthetic",
+      "count": 100,
+      "seed": 2026111601,
+      "sha256": "f7d1315c66e5c6f7ad64ad3f6ab4f202c221e91d5c2caa64d6734796ec09385a",
+      "split": "search"
+    },
+    "data/processed/synthetic-test.json": {
+      "benchmark": "synthetic",
+      "count": 100,
+      "seed": 2026111603,
+      "sha256": "8a661892224262bf54ac2691be196daba157e2a2720be020173953402cc786b7",
+      "split": "test"
+    },
+    "data/processed/synthetic-validation.json": {
+      "benchmark": "synthetic",
+      "count": 50,
+      "seed": 2026111602,
+      "sha256": "59c267db607fc3040c025c4dcc9044e55f14f9cbb07d83b894980d72c0c3b30c",
+      "split": "validation"
+    }
+  },
+  "generator_version": "new-weibull-rounded-rejection-v1",
+  "or_library": {
+    "orders_per_source": 3,
+    "source_file_sha256": "24ef075e7f6f26f55dddba907d2d4fc117b04ac543e0a35d595b3635435e1e02",
+    "split_source_counts": {
+      "search": 8,
+      "test": 8,
+      "validation": 4
+    },
+    "url": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/binpack3.txt"
+  },
+  "reference": {
+    "commit": "cc53f274237d7ab05c19df939edbc1f9616a7c19",
+    "sha256": "eec45846a8661722addbb856179327cf2ede0bc502e32be4ad58a6ac54e0aca6",
+    "url": "https://raw.githubusercontent.com/google-deepmind/funsearch/cc53f274237d7ab05c19df939edbc1f9616a7c19/bin_packing/bin_packing.ipynb"
+  },
+  "synthetic": {
+    "capacity": 100,
+    "n_items": 500,
+    "out_of_range": "reject <=0 or >100",
+    "reference_deviation": "New synthetic benchmark; published notebook has literal n=5000 sequences but no generator parameters. This project uses explicit shape3/scale45 and n500.",
+    "rounding": "numpy.rint ties-to-even",
+    "scale": 45.0,
+    "shape": 3.0
+  },
+  "version": 1
+}

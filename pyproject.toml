@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "funsearch-project"
+version = "0.1.0"
+description = "Strategy-augmented program search for online bin packing"
+requires-python = ">=3.11"
+dependencies = ["numpy==2.2.6", "PyYAML==6.0.3", "pytest==9.0.2"]
+
+[project.scripts]
+funsearch-project = "funsearch_project.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

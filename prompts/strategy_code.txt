@@ -1,0 +1,7 @@
+Return exactly {"strategy": "<English strategy of at most 80 whitespace-delimited words>", "code": "<Python function source>"}.
+Inherit and improve the parent's intended strategy alongside its code. The strategy describes the algorithm; it is not a request for private internal reasoning.
+Parent search ratio: {fitness}
+Parent strategy:
+{strategy}
+Parent code:
+{code}

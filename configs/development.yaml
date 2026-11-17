@@ -1,0 +1,22 @@
+# Author: 朱泳颐 (72657023)
+# Responsibility: Search settings and run configuration
+
+experiment_id: pilot
+attempts_per_run: 8
+global_cap: 2200
+seeds: [101]
+modes: [code_only, strategy_code]
+workers: 2
+provider:
+  name: deepseek
+  model: deepseek-flash
+  base_url: https://api.deepseek.com
+  env_path: ../project/.env
+  temperature: 1.0
+  max_tokens: 2048
+  timeout: 90
+  thinking: disabled
+limits:
+  total_seconds: 600
+  memory: '512m'
+  instance_seconds: 5
